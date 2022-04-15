@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!--configuration核心配置文件-->
+<configuration>
+
+
+    <typeAliases>
+        <package name="com.haining820.pojo"/>
+    </typeAliases>
+
+<!--    <environments default="development">-->
+<!--        <environment id="development">-->
+<!--            <transactionManager type="JDBC"/>-->
+<!--            <dataSource type="POOLED">-->
+<!--                <property name="driver" value="com.mysql.jdbc.Driver"/>-->
+<!--                <property name="url" value="jdbc:mysql://localhost:3306/mybatis?useSSL=false&amp;useUnicode=true&amp;characterEncoding=UTF-8"/>-->
+<!--                <property name="username" value="root"/>-->
+<!--                <property name="password" value="root"/>-->
+<!--            </dataSource>-->
+<!--        </environment>-->
+<!--    </environments>-->
+
+<!--    <mappers>-->
+<!--&lt;!&ndash;        <mapper resource="com/haining820/mapper/UserMapper.xml"/>&ndash;&gt;-->
+<!--        <mapper class="com.haining820.mapper.UserMapper"/>-->
+<!--    </mappers>-->
+
+
+</configuration>

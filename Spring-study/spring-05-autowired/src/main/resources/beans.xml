@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="cat" class="com.haining820.pojo.Cat"/>
+    <bean id="dog" class="com.haining820.pojo.Dog"/>
+    <bean id="people" class="com.haining820.pojo.People">
+        <property name="name" value="yuhaiyang"/>
+        <property name="cat" ref="cat"/>
+        <property name="dog" ref="dog"/>
+    </bean>
+
+</beans>
+
+        <!--开启对注解的支持-->
+        <!--    <context:annotation-config/>-->
+
+
+        <!--<bean id="people" class="com.haining820.pojo.People"/>--> <!--byType-->
+
+        <!--    <bean id="cat1" class="com.haining820.pojo.Cat"/>-->
+        <!--    <bean class="com.haining820.pojo.Dog"/>-->
+        <!--    <bean id="people" class="com.haining820.pojo.People"/>-->
+
+        <!--    <bean id="Cat" class="com.haining820.pojo.Cat"/>-->
+        <!--    <bean id="dedeog" class="com.haining820.pojo.Dog"/>-->
+
+
+        <!--<bean id="cat" class="com.haining820.pojo.Cat"/>-->
+        <!--<bean id="dog666" class="com.haining820.pojo.Dog"/>-->
+        <!--<bean class="com.haining820.pojo.Cat"/>-->
+        <!--<bean class="com.haining820.pojo.Dog"/>-->
+
+
+        <!--
+            byName:会自动在容器的上下文中查找和自己对象set方法后面的值对应的bean id!
+            byType:会自动在容器的上下文中查找和自己对象属性类型相同的bean id!byType可以省略id
+        -->
+
+        <!--<?xml version="1.0" encoding="UTF-8"?>-->
+        <!--<beans xmlns="http://www.springframework.org/schema/beans"-->
+        <!--       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+        <!--       xmlns:context="http://www.springframework.org/schema/context"-->
+        <!--       xsi:schemaLocation="http://www.springframework.org/schema/beans-->
+        <!--        https://www.springframework.org/schema/beans/spring-beans.xsd-->
+        <!--        http://www.springframework.org/schema/context-->
+        <!--        https://www.springframework.org/schema/context/spring-context.xsd">-->

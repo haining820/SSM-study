@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop
+        https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <import resource="spring-dao.xml"/>
+
+    <bean id="userMapper" class="com.haining820.mapper.UserMapperImpl">
+        <!--这里的SqlSession实际上就是SqlSessionTemplate,在spring-dao.xml中配置好了的-->
+        <property name="sqlSession" ref="sqlSession"/>
+    </bean>
+
+    <bean id="userMapper2" class="com.haining820.mapper.UserMapperImpl2">
+        <!--SqlSessionDaoSupport的父类需要sqlSessionFactory-->
+        <property name="sqlSessionFactory" ref="sqlSessionFactory"/>
+    </bean>
+
+</beans>

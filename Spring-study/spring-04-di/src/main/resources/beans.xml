@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+<beans>
+    <bean id="address" class="com.haining820.pojo.Address">
+        <property name="address" value="绥化"/>
+    </bean>
+    <bean id="student" class="com.haining820.pojo.Student">
+        <!--普通值注入,value-->
+        <property name="name" value="于海洋"/>
+
+        <!--Bean注入,ref-->
+        <property name="address" ref="address"/>
+
+        <!--数组-->
+        <property name="books">
+            <array>
+                <value>魔法石</value>
+                <value>密室</value>
+                <value>阿兹卡班的囚徒</value>
+                <value>火焰杯</value>
+            </array>
+        </property>
+
+        <!--List-->
+        <property name="hobbies">
+            <list>
+                <value>唱</value>
+                <value>跳</value>
+                <value>rap</value>
+                <value>篮球</value>
+            </list>
+        </property>
+
+        <!--Map-->
+        <property name="card">
+            <map>
+                <entry key="身份证" value="111111222222223333"/>
+                <entry key="银行卡" value="213154684984944894"/>
+            </map>
+        </property>
+
+        <!--Set-->
+        <property name="games">
+            <set>
+                <value>Cyberpunk2077</value>
+                <value>CSGO</value>
+                <value>PlantVSZombies</value>
+            </set>
+        </property>
+
+        <!--null-->
+        <!--<property name="wife" value=""/>-->
+        <property name="wife">
+            <null/>
+        </property>
+
+        <!--Properties-->
+        <property name="info">
+            <props>
+                <prop key="username">root</prop>
+                <prop key="password">root</prop>
+                <prop key="学号">20181001235</prop>
+                <prop key="姓名">于海洋</prop>
+                <prop key="姓别">男</prop>
+            </props>
+        </property>
+
+
+    </bean>
+</beans>
+
+</beans>
